@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+
 :root{
-    --color: #ffffff;
-    --background: #333333;
+    --color: hsl(334, 34%, 16%);
+    --color_2: hsl(334, 77%, 30%);
+    --color_3: hsl(334, 88%, 40%);
+    --color_4: hsl(334, 88%, 50%);
+    --box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.44)
 
 }
 
@@ -16,7 +22,231 @@ html {
     box-sizing: border-box;
 }
 
-main {
-    color: hotpink
+body {
+    font-family: Roboto;
 }
 
+a {
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+
+}
+
+
+header {
+    background-color: var(--color);
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    font-size: 2rem;
+    padding-left: 4rem;
+    padding-top: 1.4rem;
+}
+
+header > h1{
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+
+header  a {
+    color: #fff;
+    padding: 0.4rem 1rem;
+}
+
+header > h1 > a {
+    padding-left: 0;
+}
+
+header > p {
+    margin-top: 0.6rem;
+}
+
+
+nav {
+    padding: 2rem 0;
+}
+
+nav > ul {
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav > ul > li > a{
+    background-color: var(--color_3);
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+    background-color: var(--color_4);
+}
+
+
+
+
+main {
+    color: rgb(49, 3, 23)
+}
+
+main > h2, main > h3 {
+    font-weight: 100;
+    font-size: 3rem;
+    margin-top: 3.6rem;
+    padding-left: 4rem;
+}
+
+main > h3 {
+    font-size: 1.8rem;
+    margin-top: 2.4rem;
+}
+
+main > p {
+    margin: auto;
+    max-width: 76vw;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+section.beans {
+    max-width: 86vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+}
+
+.beans > article {
+    margin-top: 2.4rem;;
+    /* border: 1px solid var(--color_4); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+}
+
+.beans > article > h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 0.8rem 0;
+    background-color: var(--color_4);
+    color: #fff;
+}
+
+.beans > article > img {
+    max-width: 100%;
+}
+
+.bean > p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+.bean-details {
+    display: block;
+    width: 100%;
+    min-height: 4rem;
+    text-align: center;
+    background-color: var(--color);
+}
+
+.bean-details > a, .price {
+    padding: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.bean-details > a {
+    background-color: var(--color_3);
+    font-size: 1.2rem;
+    display: block;
+}
+
+.bean-details > a:hover {
+    background-color: var(--color_4);
+}
+
+ .price {
+     font-size: 2rem;
+     padding: 1rem;
+}
+
+.sale {
+    text-decoration: underline;
+    
+}
+
+#bean-full > h2{
+    margin-left: 6rem;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color_2);
+    font-weight: 300;
+    /* text-decoration: underline var(--color_4) 1px; */
+}
+
+#bean-full > h2 > small{
+    margin-right: 6rem;
+    color: var(--color_4);
+    font-size: 2.2rem;
+    text-decoration: none;
+}
+
+.bean-full-panel {
+    max-width: 76vw;
+    margin: 4rem auto;
+    font-size: 2.2rem;
+    font-weight: 100;
+    line-height: 3.2rem;
+    text-align: center;
+    color: var(--color_2);
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.bean-full-panel p {
+    margin-bottom: 2.4rem;
+}
+
+.bean-full-panel p:last-child {
+    margin-bottom: 0;
+}
+
+.bean-full-panel > div {
+
+}
+
+.bean-full-panel > img {
+    max-width: 40%;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.bean-full-panel {
+}
+
+.small-print{
+    font-size: 1rem;
+}
+
+footer {
+    margin-top: 4rem;
+    min-height: 12rem;
+    color: #fff;
+    background-color: var(--color);
+}
+
+footer > p {
+    padding-top: 3rem;
+    font-size: 2.2rem;
+    text-align: center;
+}

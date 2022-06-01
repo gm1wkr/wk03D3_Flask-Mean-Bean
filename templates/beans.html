@@ -23,17 +23,33 @@
     <main>
         <h2>The Mean Bean Shop</h2>
 
-        <div class="beans">
+        <section class="beans">
             {% for bean in beans %}
-            <div>
-                <h1>{{ bean.name }}</h1>
-                
-                <a href="/bean/{{ beans.index(bean) }}" title=""> Learn More -></a>
-            </div>
+            <article class="bean">
+                <h2>{{ bean.name }}</h2>
+
+                <img src="/static/img/bean.jpg" alt="A place holder image for {{ bean.name }}">
+
+                <p>{{ bean.description }}</p>
+
+                <div class="bean-details">
+                    <a href="/bean/{{ beans.index(bean) }}"> Learn More &#x2192</a>
+                    <div class="price">
+                        &#163;{{ bean.price }}
+                        {% if bean.on_sale %}
+                        <span class="sale">SALE</span>
+                        {% endif %}
+                    </div>
+                    
+                </div>
+            </article>
 
             {% endfor %}
-        </div>
+        </section>
 
     </main>
+    <footer>
+        <p>&copyThe Auchnagatt Fine Bean Company</p>
+    </footer>
 </body>
 </html>

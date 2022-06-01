@@ -3,6 +3,6 @@ class Bean:
         self.name = name
         self.description = description
         self.date = date
-        self.price = price
+        self.price =  "{:.2f}".format(price)
         self.on_sale = on_sale
         self.in_stock = in_stock
