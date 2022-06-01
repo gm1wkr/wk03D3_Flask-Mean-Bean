@@ -1,0 +1,22 @@
+:root{
+    --color: #ffffff;
+    --background: #333333;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+main {
+    color: hotpink
+}
+

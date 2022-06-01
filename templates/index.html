@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>{{ title }} - The Mean Bean</title>
+    <title>{{ title }} - Welcome</title>
 </head>
+
 <body>
 
     <header>
-        <h1><a href="/">{{ title }}</a> Popular Beans</h1>
+        <h1><a href="/beans">{{ title }}</a> Welcome Old Bean!</h1>
         <p>We are mean, our Beans are mean, be you're best bean.</p>
         <nav>
             <ul>
@@ -19,21 +21,18 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <h2>The Mean Bean Shop</h2>
+        <h2>Please select a category</h2>
+        <h3><a href="/beans">We only Sell Beans</a></h3>
+        <p>
+            Please note: Beans are sold in multiples of one. Due to the global financial 
+            crisis yatch prices have risen.  Have you seen my platipuss?
+        </p>
 
-        <div class="beans">
-            {% for bean in beans %}
-            <div>
-                <h1>{{ bean.name }}</h1>
-                
-                <a href="/bean/{{ beans.index(bean) }}" title=""> Learn More -></a>
-            </div>
 
-            {% endfor %}
-        </div>
 
     </main>
 </body>
+
 </html>
