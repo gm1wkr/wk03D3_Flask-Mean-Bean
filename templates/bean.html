@@ -33,10 +33,15 @@
             
             <div>
                 <p>{{ bean.description }}</p>
+
+                {% if bean.on_sale %}
                 <p>SALE now only <strong>&#163;{{ bean.price }}</strong> a bean!</p>
+                {%  endif %}
+                
                 {% if not bean.in_stock %}
                 <p class="small-print">Sorry, more stock arriving {{ bean.date }}</p>
                 {% endif %}
+
             </div>
 
         </section>
